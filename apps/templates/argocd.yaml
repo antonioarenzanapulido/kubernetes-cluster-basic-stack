@@ -11,7 +11,7 @@ spec:
     namespace: argocd
   project: default
   source:
-    path: argocd/argo-cd
+    path: argocd/
     repoURL: https://github.com/antonioarenzanapulido/kubernetes-cluster-basic-stack.git
     targetRevision: HEAD
   syncPolicy:
