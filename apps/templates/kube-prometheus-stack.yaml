@@ -9,13 +9,9 @@ spec:
     namespace: monitoring
   project: default
   source:
-    chart: kube-prometheus-stack
-    repoURL: https://prometheus-community.github.io/helm-charts
-    targetRevision: 48.2.2
-    helm:
-      parameters:
-        - name: prometheus.prometheusSpec.serviceMonitorSelectorNilUsesHelmValues
-          value: false
+    path: charts/kube-prometheus-stack
+    repoURL: https://github.com/antonioarenzanapulido/kubernetes-cluster-basic-stack.git
+    targetRevision: HEAD
   syncPolicy:
     automated:
       prune: true
