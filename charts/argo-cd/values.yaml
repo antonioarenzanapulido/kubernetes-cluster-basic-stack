@@ -1,6 +1,3 @@
-global:
-  addPrometheusAnnotations: true
-
 argo-cd:
   server:
     readinessProbe:
