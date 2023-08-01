@@ -1,8 +1,5 @@
 global:
-  additionalLabels:
-    prometheus.io/scrape: "true"
-    prometheus.io/path: "/metrics"
-    prometheus.io/port: "9000"
+  addPrometheusAnnotations: true
 
 argo-cd:
   server:
