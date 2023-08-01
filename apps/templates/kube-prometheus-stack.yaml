@@ -14,7 +14,7 @@ spec:
     targetRevision: 48.2.2
     helm:
       parameters:
-        - name: serviceMonitorSelectorNilUsesHelmValues
+        - name: prometheus.prometheusSpec.serviceMonitorSelectorNilUsesHelmValues
           value: false
   syncPolicy:
     automated:
