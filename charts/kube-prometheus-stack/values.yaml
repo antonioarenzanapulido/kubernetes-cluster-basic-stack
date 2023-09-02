@@ -2,4 +2,4 @@ prometheus:
   prometheusSpec:
     serviceMonitorSelectorNilUsesHelmValues: false
     serviceMonitorSelector: null
-    serviceMonitorNamespaceSelector: {}
+    serviceMonitorNamespaceSelector: "MySelector"
