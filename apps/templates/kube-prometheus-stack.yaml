@@ -1,0 +1,32 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: kube-prometheus-stack
+  namespace: argocd
+spec:
+  generators:
+    - list:
+        elements:
+          - cluster: dev
+            url: https://161ef57d-9346-4fde-8a2a-26824661209c.fr-par-1.linodelke.net:443
+          - cluster: manager
+            url: https://kubernetes.default.svc
+  template:
+    metadata:
+      name: "{{ cluster }}-kube-prometheus-stack"
+    spec:
+      project: default
+      source:
+        path: charts/kube-prometheus-stack
+        repoURL: https://github.com/antonioarenzanapulido/kubernetes-cluster-basic-stack.git
+        targetRevision: HEAD
+      destination:
+        server: "{{ url }}"
+        namespace: monitoring
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
+          - ServerSideApply=true
