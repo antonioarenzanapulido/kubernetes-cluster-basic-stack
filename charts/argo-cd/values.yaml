@@ -1,32 +1,6 @@
 argo-cd:
-  server:
-    readinessProbe:
-      # -- Minimum consecutive failures for the [probe] to be considered failed after having succeeded
-      failureThreshold: 3
-      # -- Number of seconds after the container has started before [probe] is initiated
-      initialDelaySeconds: 10
-      # -- How often (in seconds) to perform the [probe]
-      periodSeconds: 10
-      # -- Minimum consecutive successes for the [probe] to be considered successful after having failed
-      successThreshold: 1
-      # -- Number of seconds after which the [probe] times out
-      timeoutSeconds: 5
-    livenessProbe:
-      # -- Minimum consecutive failures for the [probe] to be considered failed after having succeeded
-      failureThreshold: 3
-      # -- Number of seconds after the container has started before [probe] is initiated
-      initialDelaySeconds: 10
-      # -- How often (in seconds) to perform the [probe]
-      periodSeconds: 10
-      # -- Minimum consecutive successes for the [probe] to be considered successful after having failed
-      successThreshold: 1
-      # -- Number of seconds after which the [probe] times out
-      timeoutSeconds: 5
-
-    config:
-      repositories: |
-        - type: helm
-          name: argo-cd
-          url: https://argoproj.github.io/argo-helm
-
-namespace: argocd
+  controller:
+    metrics:
+      enabled: true
+      serviceMonitor:
+        enabled: true

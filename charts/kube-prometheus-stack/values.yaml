@@ -2,4 +2,4 @@ kube-prometheus-stack:
   prometheus:
     prometheusSpec:
       serviceMonitorSelectorNilUsesHelmValues: false
-      serviceMonitorSelector: {}
+      # serviceMonitorSelector: {} Passed as manual parameter to Application as ArgoCD skips empty objects from values.yaml
