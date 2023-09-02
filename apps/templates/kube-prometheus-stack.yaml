@@ -23,10 +23,10 @@ spec:
         repoURL: https://github.com/antonioarenzanapulido/kubernetes-cluster-basic-stack.git
         targetRevision: HEAD
         helm:
-          values: |-
-            prometheus:
-              prometheusSpec:
-                serviceMonitorSelector: {}
+          parameters:
+            - name: prometheus.prometheusSpec.serviceMonitorSelector
+              value: |-
+                matchLabels: {}
       destination:
         server: "{{`{{url}}`}}"
         namespace: monitoring
