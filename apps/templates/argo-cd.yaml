@@ -12,6 +12,8 @@ spec:
     path: charts/argo-cd
     repoURL: https://github.com/antonioarenzanapulido/kubernetes-cluster-basic-stack.git
     targetRevision: HEAD
+    helm:
+      releaseName: argo
   syncPolicy:
     automated:
       prune: true
