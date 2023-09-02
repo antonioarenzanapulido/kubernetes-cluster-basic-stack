@@ -24,9 +24,10 @@ spec:
         targetRevision: HEAD
         helm:
           values: |
-            prometheus:
-              prometheusSpec:
-                serviceMonitorSelector: {}
+            kube-prometheus-stack:
+              prometheus:
+                prometheusSpec:
+                  serviceMonitorSelector: {}
       destination:
         server: "{{`{{url}}`}}"
         namespace: monitoring
