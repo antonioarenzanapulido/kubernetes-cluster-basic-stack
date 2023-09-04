@@ -1,10 +1,9 @@
-loki-promtail:
+loki:
   loki:
-    loki:
-      commonConfig:
-        replication_factor: 1
-      storage:
-        type: "filesystem"
-      auth_enabled: false # Testing purposes
-    singleBinary:
-      replicas: 1
+    commonConfig:
+      replication_factor: 1
+    storage:
+      type: "filesystem"
+    auth_enabled: false # Testing purposes
+  singleBinary:
+    replicas: 1
