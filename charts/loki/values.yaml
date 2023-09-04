@@ -1,4 +1,4 @@
-loki:
+loki-promtail:
   loki:
     commonConfig:
       replication_factor: 1
