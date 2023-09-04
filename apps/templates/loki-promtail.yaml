@@ -15,7 +15,7 @@ spec:
             url: https://kubernetes.default.svc
   template:
     metadata:
-      name: "{{`{{cluster}}`}}-kube-prometheus-stack"
+      name: "{{`{{cluster}}`}}-loki-promtail-stack"
     spec:
       project: default
       source:
