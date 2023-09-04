@@ -22,6 +22,8 @@ spec:
         path: charts/loki-promtail
         repoURL: https://github.com/antonioarenzanapulido/kubernetes-cluster-basic-stack.git
         targetRevision: main
+        helm:
+          skipCrds: true
       destination:
         server: "{{`{{url}}`}}"
         namespace: log-ingestion
