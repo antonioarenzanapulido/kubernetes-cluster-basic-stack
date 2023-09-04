@@ -24,7 +24,7 @@ spec:
         targetRevision: HEAD
       destination:
         server: "{{`{{url}}`}}"
-        namespace: monitoring
+        namespace: log-ingestion
       syncPolicy:
         automated:
           prune: true
