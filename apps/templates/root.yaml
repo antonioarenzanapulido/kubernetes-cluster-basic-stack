@@ -11,7 +11,7 @@ spec:
   source:
     path: apps/
     repoURL: https://github.com/antonioarenzanapulido/kubernetes-cluster-basic-stack.git
-    targetRevision: HEAD
+    targetRevision: main
   syncPolicy:
     automated:
       prune: true
