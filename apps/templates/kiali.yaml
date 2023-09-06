@@ -22,7 +22,7 @@ spec:
         targetRevision: main
       destination:
         server: "{{`{{url}}`}}"
-        namespace: istio-system
+        namespace: kiali-operator
       syncPolicy:
         automated:
           prune: true
