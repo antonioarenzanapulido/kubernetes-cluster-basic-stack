@@ -110,3 +110,6 @@ kiali-operator:
       deployment:
         accessible_namespaces:
           - "**"
+      external_services:
+        prometheus:
+          url: "http://monitoring-prometheus.monitoring:9100"
