@@ -112,4 +112,4 @@ kiali-operator:
           - "**"
       external_services:
         prometheus:
-          url: "http://monitoring-prometheus.monitoring:9100"
+          url: "http://monitoring-prometheus.monitoring:9090"
