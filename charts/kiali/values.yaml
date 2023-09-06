@@ -96,7 +96,7 @@ kiali-operator:
   # For what a Kiali CR spec can look like, see:
   # https://github.com/kiali/kiali-operator/blob/master/deploy/kiali/kiali_cr.yaml
   cr:
-    create: false
+    create: true
     name: kiali
     # If you elect to create a Kiali CR (--set cr.create=true)
     # and the operator is watching all namespaces (--set watchNamespace="")
