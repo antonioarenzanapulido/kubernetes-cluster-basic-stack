@@ -1,6 +1,6 @@
 kiali:
   nameOverride: ""
-  fullnameOverride: ""
+  fullnameOverride: "operator"
 
   image: # see: https://quay.io/repository/kiali/kiali-operator?tab=tags
     repo: quay.io/kiali/kiali-operator # quay.io/kiali/kiali-operator
