@@ -1,4 +1,4 @@
-kiali:
+kiali-operator:
   nameOverride: ""
   fullnameOverride: "operator"
 
