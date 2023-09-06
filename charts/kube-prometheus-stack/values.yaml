@@ -21,7 +21,7 @@ kube-prometheus-stack:
 
   ## Provide a name to substitute for the full names of resources
   ##
-  fullnameOverride: null
+  fullnameOverride: {}
 
   ## Labels to apply to all resources
   ##
