@@ -9,8 +9,6 @@ spec:
         elements:
           - cluster: pro
             url: https://42e6578a-aeed-40bb-ad03-058c40858639.fr-par-2.linodelke.net:443
-          - cluster: dev
-            url: https://161ef57d-9346-4fde-8a2a-26824661209c.fr-par-1.linodelke.net:443
           - cluster: manager
             url: https://kubernetes.default.svc
   template:
