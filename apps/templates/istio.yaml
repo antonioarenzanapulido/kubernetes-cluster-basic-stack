@@ -18,6 +18,11 @@ spec:
         path: charts/istio
         repoURL: https://github.com/antonioarenzanapulido/kubernetes-cluster-basic-stack.git
         targetRevision: main
+        helm:
+        valueFiles:
+          - base-values.yaml
+          - gateway-values.yml
+          - istiod-values.yml
       destination:
         server: "{{`{{url}}`}}"
         namespace: istio-system
