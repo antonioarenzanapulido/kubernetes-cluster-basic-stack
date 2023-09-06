@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: istio
+  namespace: argocd
+spec:
+  generators:
+    - list:
+        elements:
+          - cluster: pro
+            url: https://42e6578a-aeed-40bb-ad03-058c40858639.fr-par-2.linodelke.net:443
+  template:
+    metadata:
+      name: "{{`{{cluster}}`}}-istio"
+    spec:
+      project: default
+      source:
+        path: charts/istio
+        repoURL: https://github.com/antonioarenzanapulido/kubernetes-cluster-basic-stack.git
+        targetRevision: main
+      destination:
+        server: "{{`{{url}}`}}"
+        namespace: istio-system
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
+          - ServerSideApply=true

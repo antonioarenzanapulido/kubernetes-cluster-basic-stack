@@ -12,6 +12,17 @@ This includes:
 - Typical needs of an AWS based k8s cluster
 - ... more to come
 
+## High level overview
+
+<img src="images/clusters-overview.png" alt="cluster-overview" width="500"/>
+
+- Manager Cluster
+  - Contains the ArgoCD that manages the other cluster applications
+- Dev Cluster
+  - Contains development workload
+- Production Cluster
+  - Contains production workload
+
 ## Continuous Deployment
 
 This cluster uses the [App of Apps pattern](https://argo-cd.readthedocs.io/en/stable/operator-manual/cluster-bootstrapping/#app-of-apps-pattern).
@@ -19,6 +30,14 @@ This cluster uses the [App of Apps pattern](https://argo-cd.readthedocs.io/en/st
 To add a new application to the cluster all you have to do is add an [Application](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#applications) resource and it will added to ArgoCD managed applications.
 
 ### TODO:
+
+[X] Create manager cluster
+[X] Install argocd
+[X] Manage argocd with argocd (argoception)
+[] Create dev cluster
+[] Deploy application to dev cluster
+[] Create production cluster
+[] Deploy application to production cluster
 
 #### Monitoring
 
