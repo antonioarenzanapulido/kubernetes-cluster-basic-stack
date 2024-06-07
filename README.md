@@ -31,26 +31,26 @@ To add a new application to the cluster all you have to do is add an [Applicatio
 
 ### TODO:
 
-[X] Create manager cluster
-[X] Install argocd
-[X] Manage argocd with argocd (argoception)
-[] Create dev cluster
-[] Deploy application to dev cluster
-[] Create production cluster
-[] Deploy application to production cluster
+- [X] Create manager cluster
+- [X] Install argocd
+- [X] Manage argocd with argocd (argoception)
+- [X] Create dev cluster
+- [X] Deploy application to dev cluster
+- [X] Create production cluster
+- [X] Deploy application to production cluster
 
 #### Monitoring
 
-- TODO: Prometheus should scrape all ServiceMonitors, PodMonitors and Direct. **without the need of labels**
-- TODO: Alertmanager should fire an alert when Pods are not scheduling..., kubelet... --> 5 rules seen on LCNF.
-- TODO: Send alerts to Slack channel..
+- [X]: Prometheus should scrape all ServiceMonitors, PodMonitors and Direct. **without the need of labels**
+- [X]: Alertmanager should fire an alert when Pods are not scheduling..., kubelet... --> 5 rules seen on LCNF.
+- [X]: Send alerts to Slack channel..
 - TODO: Use Thanos to store metrics in S3 -> Compact them
 
 #### Networking
 
-- TODO: Install LinkerD
-- TODO: Avoid traffic between namespaces (except monitoring) -> ¿LinkerD?
-- TODO: Avoid traffic inside namespaces unless configured -> Network Policy
+- [X]: Install LinkerD
+- [X]: Avoid traffic between namespaces (except monitoring) -> ¿LinkerD?
+- [X]: Avoid traffic inside namespaces unless configured -> Network Policy
 
 #### Argo CD
 
